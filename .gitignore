@@ -1,0 +1,86 @@
+# =========================
+# Python
+# =========================
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+*.egg-info/
+dist/
+build/
+
+# Virtual environments
+venv/
+.env/
+.venv/
+
+# =========================
+# Jupyter / Colab
+# =========================
+.ipynb_checkpoints/
+*.nbconvert.ipynb
+
+# =========================
+# PyTorch / TensorFlow
+# =========================
+*.pt
+*.pth
+*.ckpt
+*.h5
+*.onnx
+
+# =========================
+# Model / Dataset / Logs
+# =========================
+checkpoints/
+models/
+weights/
+logs/
+runs/
+wandb/
+tensorboard/
+
+# Large datasets
+data/
+dataset/
+datasets/
+
+# Audio / Generated files
+*.wav
+*.mp3
+*.flac
+*.m4a
+
+# =========================
+# System / OS
+# =========================
+# Windows
+Thumbs.db
+Desktop.ini
+
+# MacOS
+.DS_Store
+
+# Linux
+*~
+
+# =========================
+# IDE / Editor
+# =========================
+.vscode/
+.idea/
+*.swp
+
+# =========================
+# Credentials / Secrets
+# =========================
+*.env
+.env.*
+credentials.json
+secrets.json
+
+# =========================
+# Colab specific
+# =========================
+content/

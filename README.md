@@ -11,34 +11,39 @@ This repository is created to **test and experiment with multiple open-source pr
 
 The main goal of this repository is learning, research, and hands-on experimentation with modern AI models.
 
----
-
 ## 🎙️ Tested Models
 
 Currently, this repository has successfully tested the following model:
+
 ### 🔹 VoxCPM: Tokenizer-Free TTS for Context-Aware Speech Generation and True-to-Life Voice Cloning  
 
 <p align="center">
-  <a href="https://github.com/OpenBMB/VoxCPM" target="_blank">
+  <a href="https://github.com/OpenBMB/VoxCPM" target="_blank" title="Click to open the original VoxCPM repository">
     <img src="VoxCBM/assets/voxcpm_logo.png" width="300" alt="VoxCPM Logo"/>
   </a>
 </p>
 
+<p align="center">
+  🔗 <b>Click the logo above to visit the official VoxCPM source code</b>
+</p>
+
 - A tokenizer-free Text-to-Speech model  
 - Supports context-aware speech generation  
+- Provides context-aware speech generation and realistic voice cloning  
 - Provides high-quality, realistic voice cloning  
 
-🔗 **Official Source:** https://github.com/OpenBMB/VoxCPM
+🔗 **Official Source:** https://github.com/OpenBMB/VoxCPM  
 
 This project focuses on evaluating the real-world usability of advanced TTS and voice cloning models.
 
 ---
 
+
 ✨ More open-source AI models will be added and tested in this repository in the future.
 
 ---
 
-## 🔗 GitHub của tác giả
+## 🔗 Actor's Github
 
 <div align="center">
 
