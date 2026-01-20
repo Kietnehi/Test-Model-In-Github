@@ -1,15 +1,13 @@
-
-
 ## 🤖 Repository Purpose
 
-This repository is created to **test and experiment with multiple open-source projects on GitHub** related to:
+This repository is used to **test and experiment with various open-source projects on GitHub** related to:
 
-- 🧠 Artificial Intelligence (AI)  
-- 📊 Machine Learning (ML)  
-- 🔬 Deep Learning (DL)  
-- 🎙️ Speech, Audio and Voice AI  
+- Artificial Intelligence (AI)  
+- Machine Learning (ML)  
+- Deep Learning (DL)  
 
-The main goal of this repository is learning, research, and hands-on experimentation with modern AI models.
+The main purpose of this repository is for learning, research, and hands-on experimentation with modern AI models.
+
 
 ## 🎙️ Tested Models
 
