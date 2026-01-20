@@ -58,6 +58,21 @@ This project focuses on evaluating the real-world usability of advanced TTS and 
 
 - **Interactive Visualization**  
   Generates self-contained HTML files that allow you to visually review extracted entities directly in their original context.
+---
+
+### 🔹 LEANN — Ultra-Lightweight Vector Index for Local RAG
+
+<p align="center">
+  <a href="https://github.com/yichuan-w/LEANN" target="_blank">
+    <img src="https://raw.githubusercontent.com/yichuan-w/LEANN/main/assets/logo-text.png" width="260" alt="LEANN Logo"/>
+  </a>
+</p>
+
+- Ultra-lightweight vector index with up to **97% storage saving**  
+- Fully local & privacy-preserving Retrieval-Augmented Generation (RAG)  
+- Supports documents, code, chat history, email, and live data via MCP  
+
+🔗 **Official Source:** https://github.com/yichuan-w/LEANN  
 
 
 ---
