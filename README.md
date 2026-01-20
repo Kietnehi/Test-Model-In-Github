@@ -17,20 +17,20 @@ Currently, this repository has successfully tested the following model:
 
 <p align="center">
   <a href="https://github.com/OpenBMB/VoxCPM" target="_blank" title="Click to open the original VoxCPM repository">
-    <img src="VoxCBM/assets/voxcpm_logo.png" width="300" alt="VoxCPM Logo"/>
+    <img src="VoxCBM/assets/voxcpm_logo.png" width="280" alt="VoxCPM Logo"/>
   </a>
 </p>
 
 <p align="center">
-  🔗 <b>Click the logo above to visit the official VoxCPM source code</b>
+  🔗 <b>Click the logo to visit the official VoxCPM source code</b>
 </p>
 
-- A tokenizer-free Text-to-Speech model  
-- Supports context-aware speech generation  
-- Provides context-aware speech generation and realistic voice cloning  
-- Provides high-quality, realistic voice cloning  
+- Tokenizer-free Text-to-Speech model  
+- Context-aware expressive speech generation  
+- High-quality zero-shot voice cloning  
 
-🔗 **Official Source:** https://github.com/OpenBMB/VoxCPM  
+🔗 **Official Source:** https://github.com/OpenBMB/VoxCPM
+
 
 This project focuses on evaluating the real-world usability of advanced TTS and voice cloning models.
 
