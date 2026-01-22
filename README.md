@@ -34,6 +34,24 @@ Currently, this repository has successfully tested the following model:
 
 This project focuses on evaluating the real-world usability of advanced TTS and voice cloning models.
 
+- **Readme:** [VoxCBM README](VoxCBM/README.md)
+
+---
+
+### 🔹 Open-Source LLM (Reasoning)
+
+- **Tested:** I evaluated an open-source LLM that demonstrates reasoning capabilities (chain-of-thought style reasoning and problem solving). Notes and brief results from that evaluation are included in this repository.
+ 
+<p align="center">
+  <a href="https://huggingface.co/">
+    <img src="https://huggingface.co/front/assets/huggingface_logo-noborder.svg" width="180" alt="Hugging Face Logo"/>
+  </a>
+</p>
+
+- **Browse trending models:** [Explore trending text-generation models on Hugging Face](https://huggingface.co/models?pipeline_tag=text-generation&sort=trending)
+
+- **Readme:** [LLM_Reasoning_Model README](LLM_Reasoning_Model/README.md)
+
 ---
 
 ### 🔹 LangExtract — Structured Data Extraction with LLMs
@@ -42,6 +60,8 @@ This project focuses on evaluating the real-world usability of advanced TTS and 
 ![LangExtract Demo](https://raw.githubusercontent.com/google/langextract/main/docs/_static/romeo_juliet_basic.gif)
 
 🔗 GitHub Repository: https://github.com/google/langextract?tab=readme-ov-file  
+
+- **Readme:** [LangExtract README](LangExtract/README.md)
 
 **LangExtract** is a Python library that uses Large Language Models (LLMs) to extract structured information from unstructured text documents based on user-defined instructions.
 
@@ -73,6 +93,8 @@ This project focuses on evaluating the real-world usability of advanced TTS and 
 - Supports documents, code, chat history, email, and live data via MCP  
 
 🔗 **Official Source:** https://github.com/yichuan-w/LEANN  
+
+- **Readme:** [LEAN README](LEAN/README.md)
 
 
 ---
