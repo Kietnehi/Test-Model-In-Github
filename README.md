@@ -99,9 +99,28 @@ This project focuses on evaluating the real-world usability of advanced TTS and 
 
 ---
 
-✨ More open-source AI models will be added and tested in this repository in the future.
+### 🔹 Crawl4AI — Web Data Extraction for LLM & AI
+
+<p align="center">
+  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSNAy1PPvsqXeZ9XPifYY3F5TP4SAgUZfQedw&s" width="220" alt="Crawl4AI Logo"/>
+</p>
+
+**Crawl4AI** is an open-source Python library for web crawling and scraping, designed to convert HTML content into clean, structured data (Markdown/JSON) optimized for LLMs and AI applications.
+
+#### Key Features
+
+- **AI-Optimized Output:** Removes ads, menus, and clutter; reduces token count; exports Markdown/JSON ready for LLM ingestion.
+- **Dynamic Web Handling:** Uses Playwright to render JavaScript, enabling crawling of SPAs and lazy-loaded content.
+- **High Performance:** Supports async crawling, multiple URLs at once, and caching.
+- **Smart Extraction:** CSS/XPath selectors, content clustering, and LLM-powered extraction.
+- **Free & Self-Hosted:** Open source, no paid APIs required, runs locally or on your own server.
+
+👉 **In short:** Crawl4AI is a web crawling tool purpose-built to create “clean, instantly usable” data for AI/LLM projects.
+
+- **Readme:** [Github Repository Crawl4AI](https://github.com/unclecode/crawl4ai)
 
 ---
+✨ More open-source AI models will be added and tested in this repository in the future.
 
 ## 🔗 Author's Github
 
