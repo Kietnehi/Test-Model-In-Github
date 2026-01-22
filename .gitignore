@@ -14,7 +14,8 @@ build/
 venv/
 .env/
 .venv/
-
+OpenRouter/
+Groq/
 # =========================
 # Jupyter / Colab
 # =========================
