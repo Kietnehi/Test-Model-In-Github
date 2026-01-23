@@ -45,7 +45,7 @@ async def extract_structured_data_using_llm(provider: str, api_token: str = None
             extra_args=extra_args 
         ),
         # 4. Quan trọng: Dùng BYPASS để ép chạy mới, tránh lỗi 404 cũ lưu trong cache
-        cache_mode = CacheMode.ENABLED
+        cache_mode = CacheMode.BYPASS
     )
 
     async with AsyncWebCrawler(verbose=True) as crawler:
@@ -56,7 +56,7 @@ async def extract_structured_data_using_llm(provider: str, api_token: str = None
         
         if result.success:
             try:
-                print(json.loads(result.extracted_content)[:5])
+                print(json.loads(result.extracted_content))
             except Exception as e:
                 print("Raw content:", result.extracted_content)
         else:
@@ -66,7 +66,7 @@ async def extract_structured_data_using_llm(provider: str, api_token: str = None
 # Nếu chạy file .py thông thường (Terminal/CMD):
 if __name__ == "__main__":
     # Dùng asyncio.run() để chạy hàm async
-    asyncio.run(extract_structured_data_using_llm("gemini/gemini-3-flash-preview", os.getenv("GEMINI_API_KEY")))
+    asyncio.run(extract_structured_data_using_llm("openai/gpt-4o-mini", os.getenv("GEMINI_API_KEY")))
 
 # Nếu chạy trên Jupyter Notebook / Colab thì giữ nguyên dòng dưới và bỏ dòng if __name__...:
 # await extract_structured_data_using_llm("gemini/gemini-1.5-pro", os.getenv("GEMINI_API_KEY"))
