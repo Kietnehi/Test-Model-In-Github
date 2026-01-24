@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bento Portfolio | Developer & Designer</title>
+    
+    <link rel="preconnect" href="https://rsms.me/">
+    <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
+    <link href="https://api.fontshare.com/v2/css?f=clash-display@400,500,600,700&display=swap" rel="stylesheet">
+
+    <style>
+        /* 2. CSS VARIABLES & THEME SETUP */
+        :root {
+            --bg-dark: #0f0f0f;
+            --bg-card: #1a1a1a;
+            --bg-card-hover: #252525;
+            --text-primary: #ffffff;
+            --text-secondary: #a1a1a1;
+            --accent: #1DB954; /* Spotify Green */
+            
+            --font-display: 'Clash Display', sans-serif;
+            --font-body: 'Inter', sans-serif;
+            
+            --radius: 24px;
+            --gap: 20px;
+        }
+
+        /* 3. BASE STYLES & FONT FEATURES */
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+
+        body {
+            background-color: var(--bg-dark);
+            color: var(--text-primary);
+            font-family: var(--font-body);
+            /* Kích hoạt tính năng Inter: Contextual Alternates, Slashed Zero, Tabular Numbers */
+            font-feature-settings: 'calt' 1, 'zero' 1, 'tnum' 1;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 40px 20px;
+        }
+
+        /* Hỗ trợ Variable Font cho trình duyệt hiện đại */
+        @supports (font-variation-settings: normal) {
+            body { font-family: 'Inter var', sans-serif; }
+        }
+
+        h1, h2, h3,.title-font {
+            font-family: var(--font-display);
+            font-weight: 600;
+        }
+
+        /* 4. BENTO GRID ARCHITECTURE */
+       .bento-grid {
+            display: grid;
+            width: 100%;
+            max-width: 1100px;
+            gap: var(--gap);
+            /* Mobile Default: 1 cột */
+            grid-template-columns: 1fr;
+            grid-auto-rows: minmax(180px, auto);
+        }
+
+        /* Tablet: 2 cột */
+        @media (min-width: 600px) {
+           .bento-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        /* Desktop: 4 cột */
+        @media (min-width: 1024px) {
+           .bento-grid {
+                grid-template-columns: repeat(4, 1fr);
+                grid-template-rows: repeat(3, 220px); /* 3 hàng cố định */
+            }
+            
+            /* Utility Classes cho Span */
+           .col-span-2 { grid-column: span 2; }
+           .row-span-2 { grid-row: span 2; }
+           .col-span-4 { grid-column: span 4; }
+        }
+
+        /* 5. CARD COMPONENT DESIGN */
+       .card {
+            background-color: var(--bg-card);
+            border-radius: var(--radius);
+            padding: 24px;
+            border: 1px solid rgba(255,255,255,0.08);
+            display: flex;
+            flex-direction: column;
+            transition: transform 0.3s ease, background-color 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+       .card:hover {
+            transform: translateY(-4px);
+            background-color: var(--bg-card-hover);
+            border-color: rgba(255,255,255,0.2);
+        }
+
+        /* Specific Card: Intro (Profile) */
+       .card-intro {
+            justify-content: space-between;
+        }
+       .intro-head h1 {
+            font-size: 2.5rem;
+            line-height: 1.1;
+            margin-bottom: 10px;
+        }
+       .status-badge {
+            display: inline-flex;
+            align-items: center;
+            padding: 6px 12px;
+            background: rgba(29, 185, 84, 0.1);
+            color: var(--accent);
+            border-radius: 99px;
+            font-size: 0.85rem;
+            font-weight: 500;
+            margin-bottom: 20px;
+        }
+       .status-dot {
+            width: 8px; height: 8px;
+            background: currentColor;
+            border-radius: 50%;
+            margin-right: 8px;
+            box-shadow: 0 0 8px currentColor;
+        }
+
+        /* Specific Card: Spotify Widget */
+       .card-spotify {
+            background: linear-gradient(135deg, #1DB954 0%, #106b31 100%);
+            color: white;
+            justify-content: flex-end;
+            position: relative;
+        }
+       .spotify-icon {
+            position: absolute;
+            top: 24px; left: 24px;
+            width: 24px; height: 24px;
+            fill: white;
+        }
+       .track-info h3 { margin-bottom: 4px; font-size: 1.2rem; }
+       .track-info p { opacity: 0.8; font-size: 0.9rem; }
+        
+       .progress-container {
+            margin-top: 16px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 0.75rem;
+            font-variant-numeric: tabular-nums; /* Quan trọng cho số liệu thời gian */
+        }
+       .progress-bar {
+            flex-grow: 1;
+            height: 4px;
+            background: rgba(255,255,255,0.3);
+            border-radius: 2px;
+            position: relative;
+        }
+       .progress-fill {
+            position: absolute;
+            left: 0; top: 0; bottom: 0;
+            width: 65%; /* Giả lập thời gian */
+            background: white;
+            border-radius: 2px;
+        }
+
+        /* Specific Card: Netlify Form */
+       .card-contact {
+            justify-content: center;
+        }
+       .contact-form {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            height: 100%;
+        }
+       .form-input {
+            width: 100%;
+            background: rgba(0,0,0,0.2);
+            border: 1px solid rgba(255,255,255,0.1);
+            padding: 12px 16px;
+            border-radius: 12px;
+            color: white;
+            font-family: var(--font-body);
+            outline: none;
+            transition: border-color 0.2s;
+        }
+       .form-input:focus {
+            border-color: var(--accent);
+        }
+       .btn-submit {
+            margin-top: auto;
+            background: white;
+            color: black;
+            border: none;
+            padding: 12px;
+            border-radius: 12px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+       .btn-submit:hover { background: #e0e0e0; }
+
+        /* Social Links Grid */
+       .social-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+            height: 100%;
+        }
+       .social-link {
+            background: rgba(255,255,255,0.05);
+            border-radius: 16px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-decoration: none;
+            color: var(--text-secondary);
+            font-weight: 500;
+            transition: 0.2s;
+        }
+       .social-link:hover {
+            background: rgba(255,255,255,0.1);
+            color: white;
+        }
+
+    </style>
+</head>
+<body>
+
+    <main class="bento-grid">
+        
+        <article class="card col-span-2 row-span-2 card-intro">
+            <div class="intro-head">
+                <div class="status-badge">
+                    <span class="status-dot"></span> Available for work
+                </div>
+                <h1>Frontend<br>Engineer.</h1>
+            </div>
+            <p style="color: var(--text-secondary); max-width: 80%;">
+                Chuyên gia về kiến trúc CSS, hiệu suất web và thiết kế hệ thống.
+                Xây dựng giao diện mượt mà với code tối giản.
+            </p>
+        </article>
+
+        <article class="card" style="background: #2a2a2a; justify-content: center; align-items: center;">
+            <h3 style="color: var(--text-secondary);">Vietnam</h3>
+            <p style="font-size: 2rem;">🇻🇳</p>
+        </article>
+
+        <article class="card" style="padding: 0; background: transparent; border: none;">
+            <div class="social-grid">
+                <a href="#" class="social-link">Github</a>
+                <a href="#" class="social-link">X</a>
+                <a href="#" class="social-link">Dribbble</a>
+                <a href="#" class="social-link">Mail</a>
+            </div>
+        </article>
+
+        <article class="card row-span-2 card-spotify">
+            <svg class="spotify-icon" viewBox="0 0 24 24">
+                <path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141 4.439-1.38 9.899-.659 13.56 1.56.419.301.539.84.24 1.26zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.4-1.02 15.6 1.44.539.3.719.96.419 1.5-.239.54-.899.72-1.439.42z"/>
+            </svg>
+            <div class="track-info">
+                <div class="track-name">Midnight City</div>
+                <div class="artist-name">M83</div>
+                <div class="progress-container">
+                    <span>2:34</span>
+                    <div class="progress-bar"><div class="progress-fill"></div></div>
+                    <span>4:03</span>
+                </div>
+            </div>
+        </article>
+
+        <article class="card col-span-2 card-contact">
+            <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" class="contact-form">
+                <input type="hidden" name="form-name" value="contact">
+                <p style="display: none;"><input name="bot-field" /></p>
+
+                <h3 class="title-font">Let's collaborate</h3>
+                <div style="display: flex; gap: 10px;">
+                    <input type="email" name="email" class="form-input" placeholder="your@email.com" required>
+                    <button type="submit" class="btn-submit">Send</button>
+                </div>
+            </form>
+        </article>
+
+        <article class="card">
+            <h2 style="font-size: 3.5rem; color: var(--text-primary);">4+</h2>
+            <p style="color: var(--text-secondary);">Years Experience</p>
+        </article>
+
+        <article class="card">
+            <h3 style="margin-bottom: 1rem;">Stack</h3>
+            <div style="display: flex; flex-wrap: wrap; gap: 8px;">
+                <span class="status-badge" style="background: #333; color: white;">React</span>
+                <span class="status-badge" style="background: #333; color: white;">Next.js</span>
+                <span class="status-badge" style="background: #333; color: white;">Figma</span>
+            </div>
+        </article>
+
+    </main>
+</body>
+</html>

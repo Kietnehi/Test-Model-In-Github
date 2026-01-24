@@ -109,7 +109,7 @@ async def crawl_links(urls):
 
                 # Lưu PDF
                 if result.pdf:
-                    pdf_path = os.path.join(PDF_DIR, f"{base_name}.pdf")
+                    pdf_path = os.path.join(PDF_DIR, f"{base_name}.pdf")    
                     with open(pdf_path, "wb") as f:
                         f.write(result.pdf)
 
