@@ -212,6 +212,7 @@ The `GEMINI_API_TOOL` folder provides scripts and notebooks for working with Goo
 * **google_map.py**: Script for interacting with Google Maps, possibly using Gemini API for geolocation or mapping tasks.
 * **sales.csv**: Example sales data for analysis or demo purposes.
 * **Search_Citation.py**: Script for searching and generating citations, leveraging Gemini API or other search APIs.
+
 🔗 **Google AI Studio:** [https://aistudio.google.com/](https://aistudio.google.com/)
 
 🔗 **Gemini API Documentation:** [https://ai.google.dev/gemini-api/docs](https://ai.google.dev/gemini-api/docs)
