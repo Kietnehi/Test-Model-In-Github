@@ -205,12 +205,16 @@ If you want to test or run the DuckDuckGo search UI, please go to the `duckduckg
   <img src="images/gemini.jpg" width="180" alt="Gemini Logo"/>
 </p>
 
+
 The `GEMINI_API_TOOL` folder provides scripts and notebooks for working with Google Gemini API and related data tasks:
 
 * **Code_Execution.ipynb**: Jupyter notebook for running and testing Gemini API code, including code samples and data processing demos.
 * **google_map.py**: Script for interacting with Google Maps, possibly using Gemini API for geolocation or mapping tasks.
 * **sales.csv**: Example sales data for analysis or demo purposes.
 * **Search_Citation.py**: Script for searching and generating citations, leveraging Gemini API or other search APIs.
+🔗 **Google AI Studio:** [https://aistudio.google.com/](https://aistudio.google.com/)
+
+🔗 **Gemini API Documentation:** [https://ai.google.dev/gemini-api/docs](https://ai.google.dev/gemini-api/docs)
 
 ---
 
