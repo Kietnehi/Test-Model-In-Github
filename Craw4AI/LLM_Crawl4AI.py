@@ -16,7 +16,7 @@ from dotenv import load_dotenv
 # Load file .env (Giữ nguyên đường dẫn của bạn)
 load_dotenv(r"C:\Users\ADMIN\Desktop\Github Fulll Project\Test Model AI in Colab\.env")
 
-api_key = os.environ.get("GEMINI_API_KEY")
+api_key = os.environ.get("OPENAI_API_KEY")
 
 class OpenAIModelFee(BaseModel):
     model_name: str = Field(..., description="Name of the OpenAI model.")

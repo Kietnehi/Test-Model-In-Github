@@ -238,6 +238,33 @@ The `GEMINI_API_TOOL` folder provides scripts and notebooks for working with Goo
 
 🔗 **Gemini API Documentation:** [https://ai.google.dev/gemini-api/docs](https://ai.google.dev/gemini-api/docs)
 
+
+### 🔹 Text To Speech Vietnamese
+
+<div align="center">
+  <img src="images/tts.jpg" width="300" alt="Text To Speech Vietnamese"/>
+</div>
+
+The **Text To Speech Vietnamese** module provides multiple scripts for converting Vietnamese text into speech using different TTS engines, both **online** and **offline**:
+
+* **vieneu-tts.py**: Vietnamese TTS using `vieneu` with `espeak-ng`, suitable for offline environments.
+* **edge-tts.py**: High-quality Vietnamese voice using Microsoft Edge Text-To-Speech (online).
+* **gTts.py**: Vietnamese TTS via Google Translate using `gTTS` (online).
+* **pyttsx3-tts.py**: Offline text-to-speech using system TTS engines through `pyttsx3`.
+
+### 🔧 Supported Features
+- 🇻🇳 Vietnamese language support
+- 🌐 Online & Offline TTS options
+- 🧪 Easy testing with Python scripts
+- 💻 Cross-platform (Windows / Linux / macOS)
+
+> **Note:**
+> - Voice quality depends on the selected TTS engine.
+> - `edge-tts` provides the best natural Vietnamese voice but requires Internet.
+> - `pyttsx3` works fully offline but voice quality depends on OS.
+
+
+
 ---
 
 ## 🔗 Author's Github

@@ -44,7 +44,7 @@ async def main():
     # 1. Define the LLM extraction strategy
     llm_strategy = LLMExtractionStrategy(
         llm_config=LLMConfig(
-            provider="openai/gpt-oss-20b", 
+            provider="openai/gpt-4o-mini", 
             api_token=api_key
         ),
         schema=ResultSchema.model_json_schema(),
@@ -53,7 +53,7 @@ async def main():
         chunk_token_threshold=1000,
         overlap_rate=0.0,
         apply_chunking=True,
-        input_format="markdown",  # or "html", "fit_markdown"
+        input_format="markdown",  # or "html", "fit_markdown"   
         extra_args={"temperature": 0.0, "max_tokens": 5000}
     )
     
